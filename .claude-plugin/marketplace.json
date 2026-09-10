@@ -1,0 +1,73 @@
+{
+  "name": "other",
+  "description": "GitHub と Gist の外部スキルを参照する個人用 marketplace。",
+  "owner": {
+    "name": "onokatio"
+  },
+  "interface": {
+    "displayName": "Other skills"
+  },
+  "plugins": [
+    {
+      "name": "stop-ai-slop-jp",
+      "description": "日本語の文章から AI 特有の不自然な表現を取り除くスキル。",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/iKora128/stop-ai-slop-jp.git"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "claude-real-video",
+      "description": "claude-real-video を利用して動画を制作するスキル。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video.git",
+        "path": "skills/claude-real-video-for-agents"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "japanese-tech-writing",
+      "description": "読みやすい日本語の技術文書を書くためのスキル。",
+      "source": {
+        "source": "url",
+        "url": "https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d.git"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "cognitive-rhythm-writing",
+      "description": "認知リズムを意識して読みやすい文章を書くためのスキル。",
+      "source": {
+        "source": "url",
+        "url": "https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432.git"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
