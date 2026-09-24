@@ -1,6 +1,6 @@
 # skills
 
-Claude Code と Codex で使う、外部スキルと MCP サーバーの marketplace です。表示名は `onokatio plugins`、marketplace 識別子は既存設定と同じ `other` です。
+Claude Code と Codex で使う、外部スキルと MCP サーバーの marketplace です。表示名は `onokatio plugins`、marketplace 識別子は `onokatio-plugins` です。
 
 スキル本体はこのリポジトリにコピーしません。各クライアントがインストール時に参照先から取得し、自身のキャッシュで管理します。
 
@@ -19,19 +19,19 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 
 ```text
 /plugin marketplace add onokatio/skills
-/plugin install gh-stack@other
-/plugin install stop-ai-slop-jp@other
-/plugin install claude-real-video@other
-/plugin install japanese-tech-writing@other
-/plugin install cognitive-rhythm-writing@other
-/plugin install bitwarden@other
+/plugin install gh-stack@onokatio-plugins
+/plugin install stop-ai-slop-jp@onokatio-plugins
+/plugin install claude-real-video@onokatio-plugins
+/plugin install japanese-tech-writing@onokatio-plugins
+/plugin install cognitive-rhythm-writing@onokatio-plugins
+/plugin install bitwarden@onokatio-plugins
 ```
 
-既存の `extraKnownMarketplaces.other` をインライン設定から移行する場合は、そのエントリを次のように置き換えます。既存の `enabledPlugins` の `プラグイン名@other` はそのまま使えます。
+旧識別子 `other` から移行する場合は、`extraKnownMarketplaces.other` を次の `onokatio-plugins` エントリに置き換えます。`enabledPlugins` のキーも `プラグイン名@other` から `プラグイン名@onokatio-plugins` に変更し、新しい識別子でプラグインをインストールしてください。
 
 ```json
 {
-  "other": {
+  "onokatio-plugins": {
     "source": {
       "source": "github",
       "repo": "onokatio/skills"
@@ -44,13 +44,15 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 
 ```sh
 codex plugin marketplace add onokatio/skills
-codex plugin add gh-stack@other
-codex plugin add stop-ai-slop-jp@other
-codex plugin add claude-real-video@other
-codex plugin add japanese-tech-writing@other
-codex plugin add cognitive-rhythm-writing@other
-codex plugin add bitwarden@other
+codex plugin add gh-stack@onokatio-plugins
+codex plugin add stop-ai-slop-jp@onokatio-plugins
+codex plugin add claude-real-video@onokatio-plugins
+codex plugin add japanese-tech-writing@onokatio-plugins
+codex plugin add cognitive-rhythm-writing@onokatio-plugins
+codex plugin add bitwarden@onokatio-plugins
 ```
+
+旧識別子 `other` で登録済みの場合も、上記のコマンドで marketplace を追加し、新しい識別子でプラグインをインストールしてください。
 
 ## Bitwarden MCP
 
