@@ -6,6 +6,7 @@ Claude Code と Codex で使う、外部スキルの marketplace です。market
 
 | スキル | 参照先 |
 | --- | --- |
+| gh-stack | [github/gh-stack/skills/gh-stack](https://github.com/github/gh-stack/tree/main/skills/gh-stack) |
 | stop-ai-slop-jp | [iKora128/stop-ai-slop-jp](https://github.com/iKora128/stop-ai-slop-jp) |
 | claude-real-video | [claude-real-video/skills/claude-real-video-for-agents](https://github.com/HUANGCHIHHUNGLeo/claude-real-video/tree/master/skills/claude-real-video-for-agents) |
 | japanese-tech-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d) |
@@ -15,6 +16,7 @@ Claude Code と Codex で使う、外部スキルの marketplace です。market
 
 ```text
 /plugin marketplace add onokatio/skills
+/plugin install gh-stack@other
 /plugin install stop-ai-slop-jp@other
 /plugin install claude-real-video@other
 /plugin install japanese-tech-writing@other
@@ -38,6 +40,7 @@ Claude Code と Codex で使う、外部スキルの marketplace です。market
 
 ```sh
 codex plugin marketplace add onokatio/skills
+codex plugin add gh-stack@other
 codex plugin add stop-ai-slop-jp@other
 codex plugin add claude-real-video@other
 codex plugin add japanese-tech-writing@other

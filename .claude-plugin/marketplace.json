@@ -9,6 +9,22 @@
   },
   "plugins": [
     {
+      "name": "gh-stack",
+      "description": "gh-stack で積み重ねたブランチと Pull Request を管理するスキル。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/github/gh-stack.git",
+        "path": "skills/gh-stack"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "stop-ai-slop-jp",
       "description": "日本語の文章から AI 特有の不自然な表現を取り除くスキル。",
       "source": {
