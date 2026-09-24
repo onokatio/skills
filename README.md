@@ -1,16 +1,19 @@
 # skills
 
-Claude Code と Codex で使う、外部スキルの marketplace です。marketplace 名は既存設定と同じ `other` です。
+Claude Code と Codex で使う、外部スキルと MCP サーバーの marketplace です。表示名は `onokatio plugins`、marketplace 識別子は既存設定と同じ `other` です。
 
 スキル本体はこのリポジトリにコピーしません。各クライアントがインストール時に参照先から取得し、自身のキャッシュで管理します。
 
-| スキル | 参照先 |
+MCP サーバーはカタログに起動設定だけを定義し、実装は公式パッケージから取得します。
+
+| プラグイン | 参照先 |
 | --- | --- |
 | gh-stack | [github/gh-stack/skills/gh-stack](https://github.com/github/gh-stack/tree/main/skills/gh-stack) |
 | stop-ai-slop-jp | [iKora128/stop-ai-slop-jp](https://github.com/iKora128/stop-ai-slop-jp) |
 | claude-real-video | [claude-real-video/skills/claude-real-video-for-agents](https://github.com/HUANGCHIHHUNGLeo/claude-real-video/tree/master/skills/claude-real-video-for-agents) |
 | japanese-tech-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d) |
 | cognitive-rhythm-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432) |
+| bitwarden (MCP) | [bitwarden/mcp-server](https://github.com/bitwarden/mcp-server) |
 
 ## Claude Code
 
@@ -21,9 +24,10 @@ Claude Code と Codex で使う、外部スキルの marketplace です。market
 /plugin install claude-real-video@other
 /plugin install japanese-tech-writing@other
 /plugin install cognitive-rhythm-writing@other
+/plugin install bitwarden@other
 ```
 
-既存の `extraKnownMarketplaces.other` をインライン設定から移行する場合は、そのエントリを次のように置き換えます。既存の `enabledPlugins` の `スキル名@other` はそのまま使えます。
+既存の `extraKnownMarketplaces.other` をインライン設定から移行する場合は、そのエントリを次のように置き換えます。既存の `enabledPlugins` の `プラグイン名@other` はそのまま使えます。
 
 ```json
 {
@@ -45,7 +49,16 @@ codex plugin add stop-ai-slop-jp@other
 codex plugin add claude-real-video@other
 codex plugin add japanese-tech-writing@other
 codex plugin add cognitive-rhythm-writing@other
+codex plugin add bitwarden@other
 ```
+
+## Bitwarden MCP
+
+`bitwarden` はスキルではなく、`npx -y @bitwarden/mcp-server` をローカルの stdio サーバーとして起動するプラグインです。
+
+- Node.js 22 以上と npm/npx が必要です。保管庫の操作には Bitwarden CLI (`bw`) をインストールし、`bw login` でログインしておきます。
+- ロック中は MCP の `unlock` ツールから OS のパスワード入力ダイアログで解除できます。セッショントークンなどの認証情報はカタログに含めません。
+- 組織管理 API やファイル操作などの追加設定は [公式 README](https://github.com/bitwarden/mcp-server#readme) を参照してください。
 
 ## カタログの管理
 
@@ -53,8 +66,9 @@ codex plugin add cognitive-rhythm-writing@other
 
 - GitHub / Gist のリポジトリ全体は `source: "url"`、サブディレクトリは `source: "git-subdir"` で参照します。
 - 参照先に plugin manifest がなくても、`strict: false` と `skills: ["./"]` でルートの `SKILL.md` をスキルとして読み込みます。
+- MCP サーバーは `strict: false` と `mcpServers` で起動コマンドを定義します。
 - `interface` と `policy` は Codex 用のメタデータです。Claude Code の検証では未知のフィールドとして警告されますが、読み込み時には無視されます。
 - コミットやバージョンを固定していません。更新の取得とキャッシュは各クライアントの更新機能に従います。
-- 各スキルのライセンス、実行に必要なツールや認証の条件は参照先に従います。
+- 各プラグインのライセンス、実行に必要なツールや認証の条件は参照先に従います。
 
 形式の根拠: [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces)、[OpenAI plugin packaging](https://developers.openai.com/plugins/build/plugins)。

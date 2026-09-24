@@ -1,6 +1,6 @@
 {
   "name": "other",
-  "description": "GitHub と Gist の外部スキルを参照する個人用 marketplace。",
+  "description": "外部スキルと MCP サーバーを参照する個人用 marketplace。",
   "owner": {
     "name": "onokatio"
   },
@@ -79,6 +79,26 @@
       },
       "strict": false,
       "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "bitwarden",
+      "description": "Bitwarden 公式 MCP サーバーをローカルで起動するプラグイン。",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/bitwarden/mcp-server.git"
+      },
+      "strict": false,
+      "mcpServers": {
+        "bitwarden": {
+          "command": "npx",
+          "args": ["-y", "@bitwarden/mcp-server"]
+        }
+      },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
