@@ -5,7 +5,7 @@
     "name": "onokatio"
   },
   "interface": {
-    "displayName": "Other skills"
+    "displayName": "onokatio plugins"
   },
   "plugins": [
     {
