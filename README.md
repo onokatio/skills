@@ -13,6 +13,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | claude-real-video | [claude-real-video/skills/claude-real-video-for-agents](https://github.com/HUANGCHIHHUNGLeo/claude-real-video/tree/master/skills/claude-real-video-for-agents) |
 | japanese-tech-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d) |
 | cognitive-rhythm-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432) |
+| yomiyasu | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) |
 | bitwarden (MCP) | [bitwarden/mcp-server](https://github.com/bitwarden/mcp-server) |
 
 ## Claude Code
@@ -24,6 +25,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 /plugin install claude-real-video@onokatio-plugins
 /plugin install japanese-tech-writing@onokatio-plugins
 /plugin install cognitive-rhythm-writing@onokatio-plugins
+/plugin install yomiyasu@onokatio-plugins
 /plugin install bitwarden@onokatio-plugins
 ```
 
@@ -49,6 +51,7 @@ codex plugin add stop-ai-slop-jp@onokatio-plugins
 codex plugin add claude-real-video@onokatio-plugins
 codex plugin add japanese-tech-writing@onokatio-plugins
 codex plugin add cognitive-rhythm-writing@onokatio-plugins
+codex plugin add yomiyasu@onokatio-plugins
 codex plugin add bitwarden@onokatio-plugins
 ```
 

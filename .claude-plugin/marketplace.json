@@ -86,6 +86,21 @@
       "category": "Productivity"
     },
     {
+      "name": "yomiyasu",
+      "description": "AI が生成した不自然な日本語を、読みやすく情報密度の高い文章へ推敲するスキル。",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/nanaism/yomiyasu.git"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
       "name": "bitwarden",
       "description": "Bitwarden 公式 MCP サーバーをローカルで起動するプラグイン。",
       "source": {
