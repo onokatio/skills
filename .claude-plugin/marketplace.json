@@ -25,6 +25,22 @@
       "category": "Development"
     },
     {
+      "name": "test-audit",
+      "description": "テストの価値を確認し、重複や実装に依存したテストを監査するスキル。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openclaw/openclaw.git",
+        "path": ".agents/skills/test-audit"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "stop-ai-slop-jp",
       "description": "日本語の文章から AI 特有の不自然な表現を取り除くスキル。",
       "source": {
