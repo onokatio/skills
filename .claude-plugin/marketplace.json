@@ -117,6 +117,21 @@
       "category": "Productivity"
     },
     {
+      "name": "prompt-cache-control",
+      "description": "プロンプトキャッシュのヒット率と期限切れまでの残り時間をプロンプト上に表示する Claude Code の mod。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/davila7/claude-code-templates.git",
+        "path": "cli-tool/components/mods/observability/prompt-cache-control",
+        "sha": "7f2fb2799d27090a8d56d07ccc199ab8947f5ec9"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "bitwarden",
       "description": "Bitwarden 公式 MCP サーバーをローカルで起動するプラグイン。",
       "source": {
