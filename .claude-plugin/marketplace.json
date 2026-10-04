@@ -123,8 +123,8 @@
         "source": "git-subdir",
         "url": "https://github.com/onokatio/claude-code-templates.git",
         "path": "cli-tool/components/mods/observability/prompt-cache-control",
-        "ref": "main",
-        "sha": "e4028eff65a3b48bf6d098ed7996805c311dd49f"
+        "ref": "prompt-cache-control-shared-band",
+        "sha": "81390bafae6c1bffb8b02b55385c4047dfc6e866"
       },
       "policy": {
         "installation": "AVAILABLE",
