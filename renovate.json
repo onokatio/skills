@@ -15,7 +15,7 @@
     },
     {
       "customType": "jsonata",
-      "description": "Update commit pins to the latest HEAD of each plugin's default branch when tags are unavailable.",
+      "description": "Update commit pins to the latest HEAD of the selected branch when tags are unavailable.",
       "fileFormat": "json",
       "managerFilePatterns": ["/^\\.claude-plugin\\/marketplace\\.json$/"],
       "matchStrings": [

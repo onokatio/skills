@@ -167,10 +167,10 @@
       "description": "コンテキストの使用量と、5 時間・7 日の利用上限の消費状況をプロンプト上の 1 行に表示する Claude Code の mod。",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/augiefra/claude-mods.git",
+        "url": "https://github.com/onokatio/claude-mods.git",
         "path": "plugins/token-weather-usage",
-        "ref": "main",
-        "sha": "d9afa8f942a31ec69f65139a083cc54ba15aa11b"
+        "ref": "token-weather-usage-band-children",
+        "sha": "709fbbd5bcca1d3f269c2dbacad1df3d26494d27"
       },
       "policy": {
         "installation": "AVAILABLE",
