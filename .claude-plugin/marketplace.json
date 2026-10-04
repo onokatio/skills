@@ -161,6 +161,35 @@
       "category": "Development"
     },
     {
+      "name": "token-weather-usage",
+      "description": "コンテキストの使用量と、5 時間・7 日の利用上限の消費状況をプロンプト上の 1 行に表示する Claude Code の mod。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/augiefra/claude-mods.git",
+        "path": "plugins/token-weather-usage",
+        "sha": "d9afa8f942a31ec69f65139a083cc54ba15aa11b"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
+      "name": "cc-pr-tracker",
+      "description": "GitHub の Pull Request のマージ状態、レビュー、必須チェックをプロンプト上に表示し、変化したら通知する Claude Code の mod。",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/sezaakgun/cc-pr-tracker.git",
+        "sha": "514da1edb4877cdb812ae1a25f79aa81fb6aa6db"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "bitwarden",
       "description": "Bitwarden 公式 MCP サーバーをローカルで起動するプラグイン。",
       "source": {
