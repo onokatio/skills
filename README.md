@@ -20,6 +20,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | cache-tax (mod, Claude Code のみ) | [karanb192/cache-tax](https://github.com/karanb192/cache-tax/tree/a9aa984bf601d3f5a16dda46030ceff4f373621a)（commit `a9aa984` に固定） |
 | token-weather-usage (mod, Claude Code のみ) | [augiefra/claude-mods/plugins/token-weather-usage](https://github.com/augiefra/claude-mods/tree/d9afa8f942a31ec69f65139a083cc54ba15aa11b/plugins/token-weather-usage)（commit `d9afa8f` に固定） |
 | cc-pr-tracker (mod, Claude Code のみ) | [sezaakgun/cc-pr-tracker](https://github.com/sezaakgun/cc-pr-tracker/tree/514da1edb4877cdb812ae1a25f79aa81fb6aa6db)（commit `514da1e` に固定） |
+| gh-ci-status (mod, Claude Code のみ。表示はターミナルのみ) | [diegorv/claude-functions-hook/plugins/gh-ci-status](https://github.com/diegorv/claude-functions-hook/tree/11e1d052427e1bb9d38668d4779f343b0693c2b5/plugins/gh-ci-status)（commit `11e1d05` に固定） |
 | bitwarden (MCP) | [bitwarden/mcp-server](https://github.com/bitwarden/mcp-server) |
 
 ## Claude Code
@@ -38,6 +39,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 /plugin install cache-tax@onokatio-plugins
 /plugin install token-weather-usage@onokatio-plugins
 /plugin install cc-pr-tracker@onokatio-plugins
+/plugin install gh-ci-status@onokatio-plugins
 /plugin install bitwarden@onokatio-plugins
 ```
 

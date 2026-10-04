@@ -190,6 +190,21 @@
       "category": "Development"
     },
     {
+      "name": "gh-ci-status",
+      "description": "セッションのリポジトリで動いている GitHub Actions の実行状況をプロンプト上に表示する Claude Code の mod。表示はターミナルのみ。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/diegorv/claude-functions-hook.git",
+        "path": "plugins/gh-ci-status",
+        "sha": "11e1d052427e1bb9d38668d4779f343b0693c2b5"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "bitwarden",
       "description": "Bitwarden 公式 MCP サーバーをローカルで起動するプラグイン。",
       "source": {
