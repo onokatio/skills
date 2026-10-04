@@ -15,7 +15,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | japanese-tech-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d) |
 | cognitive-rhythm-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432) |
 | yomiyasu | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) |
-| prompt-cache-control (mod, Claude Code のみ) | [davila7/claude-code-templates/.../prompt-cache-control](https://github.com/davila7/claude-code-templates/tree/7f2fb2799d27090a8d56d07ccc199ab8947f5ec9/cli-tool/components/mods/observability/prompt-cache-control)（commit `7f2fb27` に固定） |
+| prompt-cache-control (mod, Claude Code のみ) | [onokatio/claude-code-templates/.../prompt-cache-control](https://github.com/onokatio/claude-code-templates/tree/f49c8854dbe6bc9fac7bb8d90d3cd6d2a292bf2f/cli-tool/components/mods/observability/prompt-cache-control)（commit `f49c885` に固定）。[davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) のフォークで、プロンプト上の帯でほかの mod の表示を消さない修正を入れています。上流で修正が取り込まれるまでの一時的な参照先です |
 | swarm (mod, Claude Code のみ) | [OneWave-AI/claude-code-mods/swarm](https://github.com/OneWave-AI/claude-code-mods/tree/e6da26ca36a88eec3be25605d30fa20f2c1c0cec/swarm)（commit `e6da26c` に固定） |
 | cache-tax (mod, Claude Code のみ) | [karanb192/cache-tax](https://github.com/karanb192/cache-tax/tree/a9aa984bf601d3f5a16dda46030ceff4f373621a)（commit `a9aa984` に固定） |
 | token-weather-usage (mod, Claude Code のみ) | [augiefra/claude-mods/plugins/token-weather-usage](https://github.com/augiefra/claude-mods/tree/d9afa8f942a31ec69f65139a083cc54ba15aa11b/plugins/token-weather-usage)（commit `d9afa8f` に固定） |

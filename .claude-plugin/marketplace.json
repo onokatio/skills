@@ -121,9 +121,10 @@
       "description": "プロンプトキャッシュのヒット率と期限切れまでの残り時間をプロンプト上に表示する Claude Code の mod。",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/davila7/claude-code-templates.git",
+        "url": "https://github.com/onokatio/claude-code-templates.git",
         "path": "cli-tool/components/mods/observability/prompt-cache-control",
-        "sha": "7f2fb2799d27090a8d56d07ccc199ab8947f5ec9"
+        "ref": "prompt-cache-control-shared-band",
+        "sha": "f49c8854dbe6bc9fac7bb8d90d3cd6d2a292bf2f"
       },
       "policy": {
         "installation": "AVAILABLE",
