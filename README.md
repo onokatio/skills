@@ -17,6 +17,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | yomiyasu | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) |
 | prompt-cache-control (mod, Claude Code のみ) | [davila7/claude-code-templates/.../prompt-cache-control](https://github.com/davila7/claude-code-templates/tree/7f2fb2799d27090a8d56d07ccc199ab8947f5ec9/cli-tool/components/mods/observability/prompt-cache-control)（commit `7f2fb27` に固定） |
 | swarm (mod, Claude Code のみ) | [OneWave-AI/claude-code-mods/swarm](https://github.com/OneWave-AI/claude-code-mods/tree/e6da26ca36a88eec3be25605d30fa20f2c1c0cec/swarm)（commit `e6da26c` に固定） |
+| cache-tax (mod, Claude Code のみ) | [karanb192/cache-tax](https://github.com/karanb192/cache-tax/tree/a9aa984bf601d3f5a16dda46030ceff4f373621a)（commit `a9aa984` に固定） |
 | bitwarden (MCP) | [bitwarden/mcp-server](https://github.com/bitwarden/mcp-server) |
 
 ## Claude Code
@@ -32,6 +33,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 /plugin install yomiyasu@onokatio-plugins
 /plugin install prompt-cache-control@onokatio-plugins
 /plugin install swarm@onokatio-plugins
+/plugin install cache-tax@onokatio-plugins
 /plugin install bitwarden@onokatio-plugins
 ```
 

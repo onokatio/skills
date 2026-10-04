@@ -147,6 +147,20 @@
       "category": "Development"
     },
     {
+      "name": "cache-tax",
+      "description": "1 時間のプロンプトキャッシュを休憩中も延命し、キャッシュ切れ後の送信を一度止めて書き直しの費用を表示する Claude Code の mod。延命はトークンを消費する。",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/karanb192/cache-tax.git",
+        "sha": "a9aa984bf601d3f5a16dda46030ceff4f373621a"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "bitwarden",
       "description": "Bitwarden 公式 MCP サーバーをローカルで起動するプラグイン。",
       "source": {
