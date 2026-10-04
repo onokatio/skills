@@ -15,12 +15,12 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | japanese-tech-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d) |
 | cognitive-rhythm-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432) |
 | yomiyasu | [nanaism/yomiyasu](https://github.com/nanaism/yomiyasu) |
-| prompt-cache-control (mod, Claude Code のみ) | [onokatio/claude-code-templates/.../prompt-cache-control](https://github.com/onokatio/claude-code-templates/tree/f49c8854dbe6bc9fac7bb8d90d3cd6d2a292bf2f/cli-tool/components/mods/observability/prompt-cache-control)（commit `f49c885` に固定）。[davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) のフォークで、プロンプト上の帯でほかの mod の表示を消さない修正を入れています。上流で修正が取り込まれるまでの一時的な参照先です |
-| swarm (mod, Claude Code のみ) | [OneWave-AI/claude-code-mods/swarm](https://github.com/OneWave-AI/claude-code-mods/tree/e6da26ca36a88eec3be25605d30fa20f2c1c0cec/swarm)（commit `e6da26c` に固定） |
-| cache-tax (mod, Claude Code のみ) | [karanb192/cache-tax](https://github.com/karanb192/cache-tax/tree/a9aa984bf601d3f5a16dda46030ceff4f373621a)（commit `a9aa984` に固定） |
-| token-weather-usage (mod, Claude Code のみ) | [augiefra/claude-mods/plugins/token-weather-usage](https://github.com/augiefra/claude-mods/tree/d9afa8f942a31ec69f65139a083cc54ba15aa11b/plugins/token-weather-usage)（commit `d9afa8f` に固定） |
-| cc-pr-tracker (mod, Claude Code のみ) | [sezaakgun/cc-pr-tracker](https://github.com/sezaakgun/cc-pr-tracker/tree/514da1edb4877cdb812ae1a25f79aa81fb6aa6db)（commit `514da1e` に固定） |
-| gh-ci-status (mod, Claude Code のみ。表示はターミナルのみ) | [diegorv/claude-functions-hook/plugins/gh-ci-status](https://github.com/diegorv/claude-functions-hook/tree/11e1d052427e1bb9d38668d4779f343b0693c2b5/plugins/gh-ci-status)（commit `11e1d05` に固定） |
+| prompt-cache-control (mod, Claude Code のみ) | [onokatio/claude-code-templates/.../prompt-cache-control](https://github.com/onokatio/claude-code-templates/tree/main/cli-tool/components/mods/observability/prompt-cache-control)（`main` の SHA を Renovate で更新）。[davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) のフォークのデフォルトブランチを参照します |
+| swarm (mod, Claude Code のみ) | [OneWave-AI/claude-code-mods/swarm](https://github.com/OneWave-AI/claude-code-mods/tree/main/swarm)（`main` の SHA を Renovate で更新） |
+| cache-tax (mod, Claude Code のみ) | [karanb192/cache-tax](https://github.com/karanb192/cache-tax/tags)（タグを Renovate で更新） |
+| token-weather-usage (mod, Claude Code のみ) | [augiefra/claude-mods/plugins/token-weather-usage](https://github.com/augiefra/claude-mods/tree/main/plugins/token-weather-usage)（`main` の SHA を Renovate で更新） |
+| cc-pr-tracker (mod, Claude Code のみ) | [sezaakgun/cc-pr-tracker](https://github.com/sezaakgun/cc-pr-tracker/tags)（タグを Renovate で更新） |
+| gh-ci-status (mod, Claude Code のみ。表示はターミナルのみ) | [diegorv/claude-functions-hook/plugins/gh-ci-status](https://github.com/diegorv/claude-functions-hook/tree/main/plugins/gh-ci-status)（`main` の SHA を Renovate で更新） |
 | bitwarden (MCP) | [bitwarden/mcp-server](https://github.com/bitwarden/mcp-server) |
 
 ## Claude Code
@@ -88,7 +88,10 @@ codex plugin add bitwarden@onokatio-plugins
 - 参照先に plugin manifest がなくても、`strict: false` と `skills: ["./"]` でルートの `SKILL.md` をスキルとして読み込みます。
 - MCP サーバーは `strict: false` と `mcpServers` で起動コマンドを定義します。
 - `interface` と `policy` は Codex 用のメタデータです。Claude Code の検証では未知のフィールドとして警告されますが、読み込み時には無視されます。
-- コミットやバージョンを固定していません。更新の取得とキャッシュは各クライアントの更新機能に従います。
+- タグが公開されている mod は `source.ref` でタグを指定します。タグ未公開の mod は `source.ref` でデフォルトブランチを指定し、`source.sha` をその最新 HEAD に固定します。現在の指定値はカタログを参照してください。
+- mod のタグと SHA は [Renovate 設定](renovate.json) の JSONata カスタムマネージャーで検出し、更新 PR を作成します。タグ未公開の mod は指定したデフォルトブランチの最新 HEAD に更新します。
+- Renovate の実行には [Renovate GitHub App](https://github.com/apps/renovate) のリポジトリアクセスが必要です。上流にタグが公開されたら、対象の `source.sha` を削除し、`source.ref` をタグに変更することでタグ更新に切り替えられます。
+- `source.ref` / `source.sha` を指定していないプラグインは参照先の既定ブランチを取得します。クライアント側への更新の取得とキャッシュは各クライアントの更新機能に従います。
 - 各プラグインのライセンス、実行に必要なツールや認証の条件は参照先に従います。
 
 形式の根拠: [Claude Code marketplace](https://code.claude.com/docs/en/plugin-marketplaces)、[OpenAI plugin packaging](https://developers.openai.com/plugins/build/plugins)。

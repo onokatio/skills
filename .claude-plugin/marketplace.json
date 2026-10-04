@@ -123,8 +123,8 @@
         "source": "git-subdir",
         "url": "https://github.com/onokatio/claude-code-templates.git",
         "path": "cli-tool/components/mods/observability/prompt-cache-control",
-        "ref": "prompt-cache-control-shared-band",
-        "sha": "f49c8854dbe6bc9fac7bb8d90d3cd6d2a292bf2f"
+        "ref": "main",
+        "sha": "e4028eff65a3b48bf6d098ed7996805c311dd49f"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -139,6 +139,7 @@
         "source": "git-subdir",
         "url": "https://github.com/OneWave-AI/claude-code-mods.git",
         "path": "swarm",
+        "ref": "main",
         "sha": "e6da26ca36a88eec3be25605d30fa20f2c1c0cec"
       },
       "policy": {
@@ -153,7 +154,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/karanb192/cache-tax.git",
-        "sha": "a9aa984bf601d3f5a16dda46030ceff4f373621a"
+        "ref": "v2.1.3"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -168,6 +169,7 @@
         "source": "git-subdir",
         "url": "https://github.com/augiefra/claude-mods.git",
         "path": "plugins/token-weather-usage",
+        "ref": "main",
         "sha": "d9afa8f942a31ec69f65139a083cc54ba15aa11b"
       },
       "policy": {
@@ -182,7 +184,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/sezaakgun/cc-pr-tracker.git",
-        "sha": "514da1edb4877cdb812ae1a25f79aa81fb6aa6db"
+        "ref": "v0.2.0"
       },
       "policy": {
         "installation": "AVAILABLE",
@@ -197,6 +199,7 @@
         "source": "git-subdir",
         "url": "https://github.com/diegorv/claude-functions-hook.git",
         "path": "plugins/gh-ci-status",
+        "ref": "main",
         "sha": "11e1d052427e1bb9d38668d4779f343b0693c2b5"
       },
       "policy": {

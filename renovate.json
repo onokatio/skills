@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "customManagers": [
+    {
+      "customType": "jsonata",
+      "description": "Update marketplace plugins that use GitHub tags.",
+      "fileFormat": "json",
+      "managerFilePatterns": ["/^\\.claude-plugin\\/marketplace\\.json$/"],
+      "matchStrings": [
+        "plugins[source.ref and $not($exists(source.sha)) and $contains(source.url, 'https://github.com/')].{ 'depName': name, 'packageName': $replace($substringAfter(source.url, 'https://github.com/'), /\\.git$/, ''), 'currentValue': source.ref }"
+      ],
+      "datasourceTemplate": "github-tags",
+      "versioningTemplate": "semver-coerced"
+    },
+    {
+      "customType": "jsonata",
+      "description": "Update commit pins to the latest HEAD of each plugin's default branch when tags are unavailable.",
+      "fileFormat": "json",
+      "managerFilePatterns": ["/^\\.claude-plugin\\/marketplace\\.json$/"],
+      "matchStrings": [
+        "plugins[source.ref and source.sha and $contains(source.url, 'https://github.com/')].{ 'depName': name, 'packageName': $replace($substringAfter(source.url, 'https://github.com/'), /\\.git$/, ''), 'currentValue': source.ref, 'currentDigest': source.sha }"
+      ],
+      "datasourceTemplate": "github-digest",
+      "versioningTemplate": "exact"
+    }
+  ]
+}
