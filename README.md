@@ -18,7 +18,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | prompt-cache-control (mod, Claude Code のみ) | [onokatio/claude-code-templates/.../prompt-cache-control](https://github.com/onokatio/claude-code-templates/tree/prompt-cache-control-shared-band/cli-tool/components/mods/observability/prompt-cache-control)（修正入りブランチ `prompt-cache-control-shared-band` の SHA を Renovate で更新）。[davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) のフォークに、後続 mod の表示を残す修正を入れたもので、[上流 PR #1074](https://github.com/davila7/claude-code-templates/pull/1074) に取り込まれるまでの一時的な参照先 |
 | swarm (mod, Claude Code のみ) | [OneWave-AI/claude-code-mods/swarm](https://github.com/OneWave-AI/claude-code-mods/tree/main/swarm)（`main` の SHA を Renovate で更新） |
 | cache-tax (mod, Claude Code のみ) | [karanb192/cache-tax](https://github.com/karanb192/cache-tax/tags)（タグを Renovate で更新） |
-| token-weather-usage (mod, Claude Code のみ) | [onokatio/claude-mods/plugins/token-weather-usage](https://github.com/onokatio/claude-mods/tree/token-weather-usage-band-children/plugins/token-weather-usage)（修正入りブランチ `token-weather-usage-band-children` の SHA を Renovate で更新）。[augiefra/claude-mods](https://github.com/augiefra/claude-mods) のフォークに、帯でほかの mod の表示を消さない修正を入れたもので、上流に取り込まれるまでの一時的な参照先 |
+| token-weather-usage (mod, Claude Code のみ) | [augiefra/claude-mods/plugins/token-weather-usage](https://github.com/augiefra/claude-mods/tree/main/plugins/token-weather-usage)（`main` の SHA を Renovate で更新）。帯でほかの mod の表示を残す修正が [3.10.3 に取り込まれた](https://github.com/augiefra/claude-mods/pull/1#issuecomment-6010940617) ため、上流を参照 |
 | cc-pr-tracker (mod, Claude Code のみ) | [sezaakgun/cc-pr-tracker](https://github.com/sezaakgun/cc-pr-tracker/tags)（タグを Renovate で更新） |
 | gh-ci-status (mod, Claude Code のみ。表示はターミナルのみ) | [diegorv/claude-functions-hook/plugins/gh-ci-status](https://github.com/diegorv/claude-functions-hook/tree/main/plugins/gh-ci-status)（`main` の SHA を Renovate で更新） |
 | bitwarden (MCP) | [bitwarden/mcp-server](https://github.com/bitwarden/mcp-server) |
@@ -88,7 +88,8 @@ codex plugin add bitwarden@onokatio-plugins
 - 参照先に plugin manifest がなくても、`strict: false` と `skills: ["./"]` でルートの `SKILL.md` をスキルとして読み込みます。
 - MCP サーバーは `strict: false` と `mcpServers` で起動コマンドを定義します。
 - `interface` と `policy` は Codex 用のメタデータです。Claude Code の検証では未知のフィールドとして警告されますが、読み込み時には無視されます。
-- タグが公開されている mod は `source.ref` でタグを指定します。タグ未公開の mod は `source.ref` で追跡するブランチを指定し、`source.sha` をその最新 HEAD に固定します。表示の修正を維持するため、`prompt-cache-control` はフォークの `prompt-cache-control-shared-band`、`token-weather-usage` はフォークの `token-weather-usage-band-children` ブランチを指定します。現在の指定値はカタログを参照してください。
+- タグが公開されている mod は `source.ref` でタグを指定します。タグ未公開の mod は `source.ref` で追跡するブランチを指定し、`source.sha` をその最新 HEAD に固定します。表示の修正を維持するため、`prompt-cache-control` はフォークの `prompt-cache-control-shared-band` ブランチを指定します。現在の指定値はカタログを参照してください。
+- `token-weather-usage` 3.10.3 は自身でもキャッシュの残り時間を表示するため、`prompt-cache-control` と併用するとキャッシュの表示が重複します。両方とも共有の帯で後続 mod の描画を残し、それぞれの行を縦に並べます。寿命の判定方法には違いがあり、`promptCacheTtl` 設定や `prompt-cache-control` の `ttl` オプションは `token-weather-usage` には反映されません。
 - mod のタグと SHA は [Renovate 設定](renovate.json) の JSONata カスタムマネージャーで検出し、更新 PR を作成します。タグ未公開の mod は `source.ref` で指定したブランチの最新 HEAD に更新します。
 - Renovate の実行には [Renovate GitHub App](https://github.com/apps/renovate) のリポジトリアクセスが必要です。上流にタグが公開されたら、対象の `source.sha` を削除し、`source.ref` をタグに変更することでタグ更新に切り替えられます。
 - `source.ref` / `source.sha` を指定していないプラグインは参照先の既定ブランチを取得します。クライアント側への更新の取得とキャッシュは各クライアントの更新機能に従います。
