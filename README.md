@@ -10,6 +10,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 | --- | --- |
 | gh-stack | [github/gh-stack/skills/gh-stack](https://github.com/github/gh-stack/tree/main/skills/gh-stack) |
 | test-audit | [openclaw/openclaw/.agents/skills/test-audit](https://github.com/openclaw/openclaw/tree/main/.agents/skills/test-audit) |
+| security-audit | [cloudflare/security-audit-skill/skills/security-audit](https://github.com/cloudflare/security-audit-skill/tree/main/skills/security-audit) |
 | stop-ai-slop-jp | [iKora128/stop-ai-slop-jp](https://github.com/iKora128/stop-ai-slop-jp) |
 | claude-real-video | [claude-real-video/skills/claude-real-video-for-agents](https://github.com/HUANGCHIHHUNGLeo/claude-real-video/tree/master/skills/claude-real-video-for-agents) |
 | japanese-tech-writing | [k16shikano の Gist](https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d) |
@@ -29,6 +30,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 /plugin marketplace add onokatio/skills
 /plugin install gh-stack@onokatio-plugins
 /plugin install test-audit@onokatio-plugins
+/plugin install security-audit@onokatio-plugins
 /plugin install stop-ai-slop-jp@onokatio-plugins
 /plugin install claude-real-video@onokatio-plugins
 /plugin install japanese-tech-writing@onokatio-plugins
@@ -62,6 +64,7 @@ MCP サーバーはカタログに起動設定だけを定義し、実装は公�
 codex plugin marketplace add onokatio/skills
 codex plugin add gh-stack@onokatio-plugins
 codex plugin add test-audit@onokatio-plugins
+codex plugin add security-audit@onokatio-plugins
 codex plugin add stop-ai-slop-jp@onokatio-plugins
 codex plugin add claude-real-video@onokatio-plugins
 codex plugin add japanese-tech-writing@onokatio-plugins
