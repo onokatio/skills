@@ -16,7 +16,6 @@
         "url": "https://github.com/github/gh-stack.git",
         "path": "skills/gh-stack"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",
@@ -32,7 +31,6 @@
         "url": "https://github.com/openclaw/openclaw.git",
         "path": ".agents/skills/test-audit"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",
@@ -48,7 +46,6 @@
         "url": "https://github.com/cloudflare/security-audit-skill.git",
         "path": "skills/security-audit"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",
@@ -63,7 +60,6 @@
         "source": "url",
         "url": "https://github.com/iKora128/stop-ai-slop-jp.git"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",
@@ -79,7 +75,6 @@
         "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video.git",
         "path": "skills/claude-real-video-for-agents"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",
@@ -94,7 +89,6 @@
         "source": "url",
         "url": "https://gist.github.com/k16shikano/fd287c3133457c4fd8f5601d34aa817d.git"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",
@@ -109,7 +103,6 @@
         "source": "url",
         "url": "https://gist.github.com/k16shikano/eb2929f13ed19c97188393d297be8432.git"
       },
-      "strict": false,
       "skills": ["./"],
       "policy": {
         "installation": "AVAILABLE",

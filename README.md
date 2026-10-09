@@ -88,7 +88,7 @@ codex plugin add bitwarden@onokatio-plugins
 編集するのは [`.claude-plugin/marketplace.json`](.claude-plugin/marketplace.json) だけです。Codex もこの形式を読み込めるため、別のカタログや生成処理は不要です。
 
 - GitHub / Gist のリポジトリ全体は `source: "url"`、サブディレクトリは `source: "git-subdir"` で参照します。
-- 参照先に plugin manifest がなくても、`strict: false` と `skills: ["./"]` でルートの `SKILL.md` をスキルとして読み込みます。
+- 参照先に plugin manifest がなくても、`skills: ["./"]` でルートの `SKILL.md` をスキルとして読み込みます。`strict: false` は付けません。Claude デスクトップアプリはインストール時にエントリから `plugin.json` を生成するため、`strict: false` と `skills` を併記すると `conflicting manifests` で読み込みに失敗します。
 - MCP サーバーは `strict: false` と `mcpServers` で起動コマンドを定義します。
 - `interface` と `policy` は Codex 用のメタデータです。Claude Code の検証では未知のフィールドとして警告されますが、読み込み時には無視されます。
 - タグが公開されている mod は `source.ref` でタグを指定します。タグ未公開の mod は `source.ref` で追跡するブランチを指定し、`source.sha` をその最新 HEAD に固定します。表示の修正を維持するため、`prompt-cache-control` はフォークの `prompt-cache-control-shared-band` ブランチを指定します。現在の指定値はカタログを参照してください。
