@@ -214,7 +214,7 @@
         "url": "https://github.com/diegorv/claude-functions-hook.git",
         "path": "plugins/gh-ci-status",
         "ref": "main",
-        "sha": "11e1d052427e1bb9d38668d4779f343b0693c2b5"
+        "sha": "67840c696ef88405ceb42dc9ec95f3e3a7b90759"
       },
       "policy": {
         "installation": "AVAILABLE",
