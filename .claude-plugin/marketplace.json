@@ -41,6 +41,22 @@
       "category": "Development"
     },
     {
+      "name": "security-audit",
+      "description": "セキュリティの相談やコードベースの脆弱性監査に使う Cloudflare のスキル。全工程の監査は明示的に依頼したときだけ実行し、その検証スクリプトに Node.js を使う。",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/cloudflare/security-audit-skill.git",
+        "path": "skills/security-audit"
+      },
+      "strict": false,
+      "skills": ["./"],
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    },
+    {
       "name": "stop-ai-slop-jp",
       "description": "日本語の文章から AI 特有の不自然な表現を取り除くスキル。",
       "source": {
