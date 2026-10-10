@@ -177,7 +177,7 @@
         "url": "https://github.com/augiefra/claude-mods.git",
         "path": "plugins/token-weather-usage",
         "ref": "main",
-        "sha": "1f931f45d298bbc8cd8c836a67136666a7f49bbe"
+        "sha": "4849e4a814c9a03410c4d563a30d0148be1503e3"
       },
       "policy": {
         "installation": "AVAILABLE",
